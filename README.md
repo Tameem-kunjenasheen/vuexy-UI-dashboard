@@ -6,22 +6,65 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Overview of a project that includes a multi-step contact form wizard, a user list page, and navigation functionality. This project is built using Angular and showcases how to manage and navigate between different views while preserving form state across steps.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+################################   Project Overview   ################################
+Project Name: Angular Multi-Step Form and Navigation Application
 
-## Build
+Objective:
+The objective of this project is to create a web application that demonstrates:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Multi-step form wizard for collecting user information.
+User list page to display a list of users.
+Navigation between different components (pages) of the application.
+Maintaining state across multiple form steps using a service.
+Key Features
+Multi-Step Contact Form Wizard:
 
-## Running unit tests
+A form split into three steps, where each step collects different parts of the user's information.
+Utilizes a service (FormDataService) to store and retrieve form data between steps.
+Ensures data persistence and smooth transition between steps.
+User List Page:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Displays a list of users in a tabular format.
+Can include functionalities like sorting, filtering, and pagination.
+Fetches data from a mock or real API.
+Navigation:
 
-## Running end-to-end tests
+Side navigation menu to navigate between different pages such as the User List, Locations, and Contact Form.
+Each menu item links to a corresponding route in the Angular application.
+Provides visual feedback on active navigation item.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Components and Services
+UserListComponent:
 
-## Further help
+Displays a list of users.
+Template includes a table structure with user data.
+LocationsComponent:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Placeholder component for displaying locations (could be extended to show map or list of locations).
+ContactFormStep1Component, ContactFormStep2Component, ContactFormStep3Component:
+
+Represents each step of the multi-step form.
+Each component collects part of the form data and uses FormDataService to save and retrieve data.
+FormDataService:
+
+Service to store form data and ensure persistence across form steps.
+Uses BehaviorSubject for reactive state management.
+How to Use the Project
+Set Up:
+
+Clone the repository.
+Run npm install to install dependencies.
+Development Server:
+
+Run ng serve to start the development server.
+Navigate to http://localhost:4200/ to view the application.
+Navigation:
+
+Use the side navigation menu to switch between the User List, Locations, and Contact Form pages.
+Fill out the multi-step contact form to see how data is preserved across steps using FormDataService.
+Customization:
+
+Modify components, routes, and services as per your requirements.
+Extend functionality, add more components, and integrate with real APIs as needed.
