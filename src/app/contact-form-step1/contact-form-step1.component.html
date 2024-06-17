@@ -1,0 +1,12 @@
+<p>contact-form-step1 works!</p>
+<form (ngSubmit)="nextStep()" #form="ngForm">
+  <div>
+    <label>Name:</label>
+    <input type="text" name="name" [(ngModel)]="formData.name" required>
+  </div>
+  <div>
+    <label>Email:</label>
+    <input type="email" name="email" [(ngModel)]="formData.email" required>
+  </div>
+  <button type="submit">Next</button>
+</form>
