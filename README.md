@@ -9,15 +9,18 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 Overview of a project that includes a multi-step contact form wizard, a user list page, and navigation functionality. This project is built using Angular and showcases how to manage and navigate between different views while preserving form state across steps.
 
 ################################   Project Overview   ################################
+
+
 Project Name: Angular Multi-Step Form and Navigation Application
 
-Objective:
-The objective of this project is to create a web application that demonstrates:
+ 
 
 Multi-step form wizard for collecting user information.
 User list page to display a list of users.
 Navigation between different components (pages) of the application.
 Maintaining state across multiple form steps using a service.
+
+
 Key Features
 Multi-Step Contact Form Wizard:
 
