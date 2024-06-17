@@ -1,0 +1,26 @@
+<div>
+  <div class="p-5 pb-1 text-center text-lg font-sans text-gray-800">Last few transactions</div>
+  <div class="overflow-auto h-[185px]">
+    <div class="flex items-center p-2 border-b border-gray-200" *ngFor="let transaction of transactions">
+      <div class="w-[55px]">
+        <img [src]="transaction.imgSrc" alt="" class="w-[45px] h-[45px] object-cover" />
+      </div>
+      <div class="p-2 text-base w-[190px]">{{ transaction.title }}</div>
+      <div class="p-2 text-base w-[90px]">{{ transaction.price }}</div>
+      <div class="p-2 text-base w-[190px]">
+        <div>{{ transaction.shop }}</div>
+        <div class="mt-1 text-sm text-gray-500">{{ transaction.location }}</div>
+      </div>
+      <div
+        class="p-2 text-sm uppercase font-bold"
+        [ngClass]="{
+          'text-purple-600': transaction.status === 'confirmed',
+          'text-red-800': transaction.status === 'pending',
+          'text-teal-800': transaction.status === 'shipped'
+        }"
+      >
+        {{ transaction.status }}
+      </div>
+    </div>
+  </div>
+</div>
